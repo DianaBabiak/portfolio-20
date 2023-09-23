@@ -4,31 +4,33 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 
 
-export const Skills = ()=>{
+export const Skills = () => {
 
     return (
 
         <StyledSkills>
-            <SectionTitle title={'Skills'}/>
-            < FlexWrapper wrap={'wrap'}>
-            <Icon iconId={"js"}/>
-            <Icon iconId={"css"}/>
-            <Icon iconId={"html"}/>
-            <Icon iconId={"vector"}/>
-            <Icon iconId={"github"}/>
-            <Icon iconId={"git"}/>
-            <Icon iconId={"react"}/>
-            <Icon iconId={"sass"}/>
-            <Icon iconId={"bootstrap"}/>
-            <Icon iconId={"tailwind"}/>
+            <div className='container'>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <SectionTitle title={'Skills'}/>
+
+                    <div className='wrapperIcon'>
+                        <Icon iconId={"js"}/>
+                        <Icon iconId={"css"}/>
+                        <Icon iconId={"html"}/>
+                        <Icon iconId={"vector"}/>
+                        <Icon iconId={"github"}/>
+                        <Icon iconId={"html"}/>
+                    </div>
+                    <div className='wrapperIcon'>
+                        <Icon iconId={"git"}/>
+                        <Icon iconId={"react"}/>
+                        <Icon iconId={"sass"}/>
+                        <Icon iconId={"bootstrap"} height={'88px'} width={'88px'} viewBox={'0 0 88px 88 px'}/>
+                        <Icon iconId={"tailwind"}/>
+                        <Icon iconId={"sass"}/>
+                    </div>
                 </FlexWrapper>
-
-
-
-
-
-
-
+            </div>
 
 
         </StyledSkills>
@@ -37,12 +39,8 @@ export const Skills = ()=>{
 
 
 const StyledSkills = styled.section`
-display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: darkseagreen;
-  
+  margin-bottom: 74px;
+
+
 
 `

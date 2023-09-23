@@ -2,39 +2,36 @@ import styled from "styled-components";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import {ButtonLink} from "../../../components/buttonLink/ButtonLink.tsx";
 import {Button} from "../../../components/button/Button.tsx";
+import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
+import {ContactField} from "../../../components/contactField/ContactField.tsx";
 
 
 export const Contacts = () => {
 
     return (
         <StyledContacts>
-            <SectionTitle title={'Contact me'}/>
-            <StyledForm>
-                <Label htmlFor={'Name'}>Name</Label>
-                <Field id={'Name'} type={"text"}></Field>
+            <div className='container'>
+                <FlexWrapper direction={'column'} align={'center'}>
+                    <SectionTitle title={'Contact me'}/>
 
-                <Label htmlFor={'email'}>Email</Label>
-                <Field id ={'email'} type={"email"}></Field>
-
-                <Label htmlFor={'message'}>Message</Label>
-                <Field id={'message'} as ="textarea"/>
-
-               <Button type={"submit"}>Send</Button>
+                    <StyledForm>
+                        <ContactField title={'Name'} type={'text'}/>
+                        <ContactField title={'Email'} type={'Email'}/>
+                        <ContactField title={'Message'} type={'textarea'}/>
+                        <Button type={"submit"}>Send</Button>
 
 
-            </StyledForm>
+                    </StyledForm>
+                </FlexWrapper>
 
+            </div>
         </StyledContacts>
     )
 }
 
 
 const StyledContacts = styled.section`
-display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
+  margin-bottom: 74px;
 
 
 
@@ -44,21 +41,10 @@ display: flex;
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  height: 100vh;
-  width: 30%;
+  gap: 24px;
+  margin-top: 80px;
+  align-items: flex-end;
 
 `
 
-
-const Field = styled.input`
-   
-
-`
-
-const Label = styled.label`
-
-
-
-`
 

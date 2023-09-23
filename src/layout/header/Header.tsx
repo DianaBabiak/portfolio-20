@@ -1,22 +1,31 @@
 import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
 import {Menu} from "../../components/menu/Menu.tsx";
+import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
 
 export const Header = () => {
 
     const arrayTitleMenu = ['About', 'Projects', 'Contacts']
     return (
         <StyledHeader>
-            <Logo/>
-            <Menu title={arrayTitleMenu}/>
+           <div className='container'>
+               <FlexWrapper justify={'space-between'} align={'center'}>
+                   <Logo/>
+                   <Menu title={arrayTitleMenu}/>
+               </FlexWrapper>
+
+           </div>
         </StyledHeader>
     )
 }
 
 
 const StyledHeader = styled.header`
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
+  margin-bottom: 55px;
+ 
+  position: relative;
+  z-index: 99999999;
+
+
 
 `
