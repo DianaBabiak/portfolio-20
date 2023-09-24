@@ -5,76 +5,80 @@ import styled from "styled-components";
 import {Theme} from "../../styles/Theme.ts";
 
 interface InformationAboutProjectPropsType {
-    projectTitle: string
-    discretion: string
-    buttonLink: string
-    buttonTitle: string
-    imgLink: string
-    imgDiscretion?: string
-    flexDirection?: string
-    borderRadiusImg?: string
-    secondaryButtonLink?:string
-    secondaryButtonTitle?:string
+    projectTitle: string;
+    projectDescription: string;
+    flexDirection?: string;
 
+    primaryButton: {
+        link: string;
+        label: string;
+    };
 
+    secondaryButton?: {
+        link: string;
+        label: string;
+    };
+
+    image: {
+        link: string;
+        description?: string;
+        borderRadius?: string;
+    }
 }
-
 
 export const InformationAboutProject = ({
                                             projectTitle,
-                                            discretion,
-                                            buttonLink,
-                                            buttonTitle,
-                                            imgDiscretion,
-                                            imgLink,
+                                            projectDescription,
                                             flexDirection,
-                                            borderRadiusImg,
-                                            secondaryButtonLink,
-                                            secondaryButtonTitle
+                                            primaryButton,
+                                            secondaryButton,
+                                            image
                                         }: InformationAboutProjectPropsType) => {
     return (
         <Wrapper direction={flexDirection}>
-            <FlexWrapper direction={'column'} padding={'0 45px'} background={Theme.colors.secondaryBg}
-                         justify={'center'}>
+            <FlexWrapper
+                direction={"column"}
+                padding={"0 45px"}
+                background={Theme.colors.secondaryBg}
+                justify={"center"}
+            >
                 <ProjectTitle title={projectTitle}/>
-                <StyledDiscretion>{discretion}</StyledDiscretion>
-                <FlexWrapper gap={'10px'}>
-                    <ButtonLink link={buttonLink} title={buttonTitle} type={'project'}/>
-                    {secondaryButtonLink && secondaryButtonTitle &&  <ButtonLink link={secondaryButtonLink } title={secondaryButtonTitle} type={'project'}/>}
+                <StyledDescription>{projectDescription}</StyledDescription>
+                <FlexWrapper gap={"10px"}>
+                    <ButtonLink link={primaryButton.link} label={primaryButton.label} type={"outline"} size={'large'}/>
+                    {secondaryButton && (
+                        <ButtonLink
+                            link={secondaryButton.link}
+                            label={secondaryButton.label}
+                            type={"outline"}
+                            size={'large'}
+                        />
+                    )}
                 </FlexWrapper>
+            </FlexWrapper>
 
-
-                </FlexWrapper>
-
-
-                <StyledImgProject borderRadiusImg={borderRadiusImg} src={imgLink}
-                                  alt={imgDiscretion || 'This is my project'}/>
-
+            <StyledProjectImg
+                borderRadius={image.borderRadius}
+                src={image.link}
+                alt={image.description ?? "This is my project"}
+            />
         </Wrapper>
-
-
-    )
-
-
-}
+    );
+};
 
 interface WrapperPropsType {
-    direction: string | undefined
+    direction: string | undefined;
 }
-
 
 const Wrapper = styled.div<WrapperPropsType>`
   display: flex;
   margin: 80px 0 0;
-  flex-direction: ${(props: WrapperPropsType) => props.direction ?? 'row'};
+  flex-direction: ${(props: WrapperPropsType) => props.direction ?? "row"};
   background: ${Theme.colors.secondaryBg};
   border-radius: 25px;
-  
+`;
 
-`
-
-
-const StyledDiscretion = styled.p`
+const StyledDescription = styled.p`
   color: ${Theme.colors.secondaryText};
   font-size: 18px;
   font-style: normal;
@@ -82,26 +86,18 @@ const StyledDiscretion = styled.p`
   line-height: 150%;
   align-self: stretch;
   padding: 24px 0;
-  text-align: left
-
-`
+  text-align: left;
+`;
 
 interface BorderRadiusImgPropsType {
-    borderRadiusImg: string | undefined
+    borderRadius: string | undefined;
 }
 
-
-const StyledImgProject = styled.img<BorderRadiusImgPropsType>`
+const StyledProjectImg = styled.img<BorderRadiusImgPropsType>`
   object-fit: cover;
   width: 50%;
   height: 526px;
   flex-shrink: 0;
-  border-radius: ${(props: BorderRadiusImgPropsType) => props.borderRadiusImg ?? '0'};
-  
- 
-  
-  
-`
-
-
-
+  border-radius: ${(props: BorderRadiusImgPropsType) =>
+          props.borderRadius ?? "0"};
+`;

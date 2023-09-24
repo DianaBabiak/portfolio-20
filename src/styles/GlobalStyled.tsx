@@ -1,8 +1,7 @@
-import {createGlobalStyle} from "styled-components";
-import {Theme} from "./Theme.ts";
+import { createGlobalStyle } from "styled-components";
+import { Theme } from "./Theme.ts";
 
 export const GlobalStyled = createGlobalStyle`
-
   *,
   *::before,
   *::after{
@@ -10,17 +9,19 @@ export const GlobalStyled = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-
-
+  
   body {
-    font-family: 'Nunito',-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: ${Theme.fontFamily.primaryFontFamily};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: var(--bg-gray,${Theme.colors.primaryBg});
+    background-color: ${Theme.colors.primaryBg};
     color: ${Theme.colors.primaryText};
-    /*max-width: 1440px;*/
+  }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 ul{
@@ -34,9 +35,7 @@ a{
 button{
   border:none;
   background-color: unset;
-  
 }
 
 
-
-`
+`;

@@ -26,10 +26,30 @@ If you are developing a production application, we recommend updating the config
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
-
-
 font-family: 'Comfortaa', cursive;
 font-family: 'Nunito', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif;
+
+
+wrapperIcon - далить из файла App.css и вообще удалить этот файл
+.app - удалить из index.css и сделать как компоненту
+arrayTitleMenu - вынести в константы
+container - удалить этот стиль и сделать отдельную компоненту
+color: #333; - use constant
+MainBg - rename
+использовать flex-wrap для иконок в компоненте skills или grid
+discretion -переименовать
+в buttonLink type={"project"} попытаться переделать, чтобы не привязываться к разделу (как пример посмотреть пропсы в MUI)
+StyledImgProject ->StyledProjectImg
+в компоненте InformationAboutProjectPropsType группировать пропсы по компонентам, где они используются
+ContactFieldPropsType прпс title переименовать в label
+создать компонент Input который будет возвращать инпут по типу переданному. это можно использовать в компоненте ContactField чтобы уменьшить код
+компонента ImgProject нигде не используется
+в Footer компоненте для иконок использовать массив данных и потом при помощи map отрисовать, чтобы уменьшить кол-во кода
+пофиксить ховер на кнопке
+шрифты добавить в константы
+
+img padding main
+section make component???????? at the end project

@@ -1,45 +1,49 @@
 import styled from "styled-components";
-import {Theme} from "../../styles/Theme.ts";
+import { Theme } from "../../styles/Theme.ts";
 
-
-interface MenuPropsTitle {
-    title: string[]
+interface MenuPropsType {
+  menuItems: {
+      name: string,
+      url?: string
+  }[];
 }
 
-export const Menu = ({title,index}: MenuPropsTitle) => {
-
-    return (
-        <StyledMenu>
-            <ul key={index}>
-                {title.map((item) => {
-                    return <li>
-                        <a href={''}>{item}</a>
-                    </li>
-                })}
-
-
-            </ul>
-        </StyledMenu>
-    )
-}
-
+export const Menu = ({ menuItems }: MenuPropsType) => {
+  return (
+    <StyledMenu>
+      <ul>
+        {menuItems.map((item) => {
+          return (
+            <li key={item.name}>
+              <a href={item.url ?? ''}>{item.name}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </StyledMenu>
+  );
+};
 
 const StyledMenu = styled.nav`
   ul {
     display: flex;
     gap: 30px;
-    padding: 0 12px 0 0;
-    
+    padding: 0 20px 0 0;
   }
   
-  a{
+  li {
+    &:hover{
+      transform: scale(1.2);;
+    }
+    
+  }
+
+  a {
     color: ${Theme.colors.primaryText};
-    font-family: 'Raleway', sans-serif;
+    font-family:${Theme.fontFamily.quaternaryFontFamily};
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 28px;
-    
   }
-
-`
+`;
