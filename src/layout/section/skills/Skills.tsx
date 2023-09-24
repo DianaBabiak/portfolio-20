@@ -24,7 +24,7 @@ export const Skills = () => {
               iconId={"bootstrap"}
               height={"88px"}
               width={"88px"}
-              viewBox={"0 0 88px 88 px"}
+              viewBox={"0 0 88 88"}
             />
             <Icon iconId={"tailwind"} />
             <Icon iconId={"sass"} />

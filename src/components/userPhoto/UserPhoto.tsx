@@ -28,9 +28,9 @@ const StyledUserPhoto = styled.img`
   width: 530px;
   height: 690px;
   position: absolute;
-  top: -65px;
+  top: -60px;
   right: -37px;
   z-index: 2;
-  border-radius: 0 0 98% 88%;
+  border-radius: 0 0 60% 45%/0 0 54% 73%;
  
 `;

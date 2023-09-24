@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo.tsx";
 import { Menu } from "../../components/menu/Menu.tsx";
 import { FlexWrapper } from "../../components/flexWrapper/FlexWrapper.tsx";
-import {CONSTANT} from "../../CONSTANT/CONSTANT.ts";
+import {CONSTANT} from "../../constant/constant.ts";
 import {StyledContainer} from "../../components/styledContainer/StyledContainer.ts";
 
 export const Header = () => {

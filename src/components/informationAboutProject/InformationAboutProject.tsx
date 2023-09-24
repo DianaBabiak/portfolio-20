@@ -58,7 +58,7 @@ export const InformationAboutProject = ({
             </FlexWrapper>
 
             <StyledProjectImg
-                borderRadius={image.borderRadius}
+                borderradius={image.borderRadius}
                 src={image.link}
                 alt={image.description ?? "This is my project"}
             />
@@ -90,7 +90,7 @@ const StyledDescription = styled.p`
 `;
 
 interface BorderRadiusImgPropsType {
-    borderRadius: string | undefined;
+    borderradius: string | undefined;
 }
 
 const StyledProjectImg = styled.img<BorderRadiusImgPropsType>`
@@ -99,5 +99,5 @@ const StyledProjectImg = styled.img<BorderRadiusImgPropsType>`
   height: 526px;
   flex-shrink: 0;
   border-radius: ${(props: BorderRadiusImgPropsType) =>
-          props.borderRadius ?? "0"};
+          props.borderradius ?? "0"};
 `;

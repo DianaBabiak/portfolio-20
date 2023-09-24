@@ -10,7 +10,7 @@ export const Logo = () => {
           iconId={"logo"}
           height={"50px"}
           width={"50px"}
-          viewBox={"0 0 50px 50px"}
+          viewBox={"0 0 50 50"}
         />
         <StyledLogoTitle>Dziana Babiak</StyledLogoTitle>
       </FlexWrapper>

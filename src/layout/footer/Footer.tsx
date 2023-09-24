@@ -4,7 +4,7 @@ import {Icon} from "../../components/icon/Icon.tsx";
 import {Theme} from "../../styles/Theme.ts";
 import {StyledContainer} from "../../components/styledContainer/StyledContainer.ts";
 import {MessengersLinkList, SocialLinkList} from "../../components/messengersLinkList/MessengersLinkList.tsx";
-import {CONSTANT} from "../../CONSTANT/CONSTANT.ts";
+import {CONSTANT} from "../../constant/constant.ts";
 
 
 export const Footer = () => {
