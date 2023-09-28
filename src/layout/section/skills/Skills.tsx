@@ -3,6 +3,7 @@ import { Icon } from "../../../components/icon/Icon.tsx";
 import styled from "styled-components";
 import { SectionTitle } from "../../../components/sectionTitle/SectionTitle.tsx";
 import {StyledContainer} from "../../../components/styledContainer/StyledContainer.ts";
+import {Theme} from "../../../styles/Theme.ts";
 
 export const Skills = () => {
   return (
@@ -45,10 +46,19 @@ const WrapperIcon = styled.div`
   margin-top: 74px;
   display: grid;
   grid-template-columns: repeat(6, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-auto-rows: 120px;
   gap: 74px 0;
   justify-content: space-between;
   align-content: space-between;
   
+  
+  @media ${Theme.media.tablet}{
+    grid-template-columns: repeat(4, auto);
+  }
+
+  @media ${Theme.media.mobile}{
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+  }
 
 `

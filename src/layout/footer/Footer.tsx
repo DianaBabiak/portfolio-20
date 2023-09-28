@@ -30,7 +30,10 @@ const StyledFooter = styled.footer`
   background-image: url("../../../src/assets/images/footer.webp");
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
+  
+  
 `;
 
 const StyledText = styled.small`

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Theme } from "../../styles/Theme.ts";
+import { Theme } from "../../../styles/Theme.ts";
 
 interface MenuPropsType {
   menuItems: {
@@ -25,10 +25,16 @@ export const Menu = ({ menuItems }: MenuPropsType) => {
 };
 
 const StyledMenu = styled.nav`
+  @media ${Theme.media.tablet}{
+    display:none;
+  }
+  
   ul {
     display: flex;
     gap: 30px;
     padding: 0 20px 0 0;
+    
+    
   }
   
   li {

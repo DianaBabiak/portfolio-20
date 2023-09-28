@@ -4,17 +4,23 @@ import { FlexWrapper } from "../../../components/flexWrapper/FlexWrapper.tsx";
 import { Theme } from "../../../styles/Theme.ts";
 import { UserPhoto } from "../../../components/userPhoto/UserPhoto.tsx";
 import {StyledContainer} from "../../../components/styledContainer/StyledContainer.ts";
+import {MobileUserPhoto} from "../../../components/mobileUserPhoto/MobileUserPhoto.tsx";
 
 export const Main = () => {
   return (
     <StyledMain>
       <StyledContainer>
         <WrapperMain>
-          <FlexWrapper direction={"column"}>
+          <FlexWrapper direction={"column"} adaptiveAlign={'center'} >
+            <MobileUserPhoto/>
             <MainTitle>Software Developer</MainTitle>
             <Title>Hello, my name is Dziana Babiak</Title>
             <DescriptionTitle>
               Short text with details about you, what you do or your
+              professional career. You can add more information on the about
+              page. Short text with details about you, what you do or your
+              professional career. You can add more information on the about
+              page. Short text with details about you, what you do or your
               professional career. You can add more information on the about
               page.
             </DescriptionTitle>
@@ -31,14 +37,19 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  padding-bottom: 105px;
   margin-bottom: 74px;
 `;
 
 const WrapperMain = styled.div`
   position: relative;
-  z-index: 999999;
-  max-width: 38%;
+  z-index: 999;
+  max-width: 50%;
+
+  @media ${Theme.media.tablet}{
+    max-width: 100%;
+
+
+  }
 `;
 
 const MainTitle = styled.h1`
@@ -49,6 +60,19 @@ const MainTitle = styled.h1`
   line-height: normal;
   text-transform: uppercase;
   align-self: stretch;
+  margin-bottom: 5px;
+
+  @media screen and (min-width: 769px) and (max-width: 947px){
+    color: ${Theme.colors.secondaryText};
+
+  }
+
+  @media ${Theme.media.tablet}{
+    text-align: center;
+    
+  }
+
+  
 `;
 
 const Title = styled.span`
@@ -58,6 +82,13 @@ const Title = styled.span`
   font-style: normal;
   font-weight: 700;
   line-height: 120%;
+
+  @media ${Theme.media.tablet}{
+   text-align: center;
+    font-size: 44px;
+
+
+  }
 `;
 
 const DescriptionTitle = styled.p`
@@ -67,4 +98,11 @@ const DescriptionTitle = styled.p`
   font-weight: 400;
   line-height: 36px;
   padding: 32px 0;
+
+
+  @media ${Theme.media.tablet}{
+    text-align: justify;
+    
+  }
+ 
 `;

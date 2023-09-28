@@ -23,5 +23,8 @@ const StyledLogoTitle = styled.span`
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 180%
+  line-height: 180%;
+  margin-right: 10px;
+
+  
 `;

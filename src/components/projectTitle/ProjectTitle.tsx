@@ -16,4 +16,9 @@ const StyledProjectTitle = styled.h3`
   line-height: 150%;
   align-self: stretch;
   text-align: left;
+
+  @media ${Theme.media.tablet}{
+    text-align: center;
+
+  }
 `;

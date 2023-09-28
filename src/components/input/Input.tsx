@@ -30,6 +30,12 @@ const Field = styled.input`
   &:focus {
     outline-color: ${Theme.colors.accent};
   }
+  
+  @media ${Theme.media.mobile}{
+    width: 250px;
+  }
+  
+  
 `;
 const TextareaField = styled(Field)`
   resize: none;

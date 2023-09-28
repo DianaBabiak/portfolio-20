@@ -11,12 +11,12 @@ export const Projects = () => {
   return (
     <StyledProjects>
       <StyledContainer>
-        <FlexWrapper direction={"column"} align={"center"} padding={"0 106px"}>
+        <FlexWrapper direction={"column"} align={"center"} padding={"0 106px"} adaptivePadding={"0"} >
           <SectionTitle title={"Projects"} />
           <InformationAboutProject
               projectTitle={"Project Name"}
               projectDescription={
-                  "What was your role, your deliverables, if the project was personal, freelancing."
+                  "What was your role, your deliverables, if the project was personal, freelancing. What was your role, your deliverables, if the project was personal, freelancing."
               }
               primaryButton={{link:"#", label:"View Project"}}
               secondaryButton={{link:"#",label:"View Demo"}}
@@ -25,7 +25,7 @@ export const Projects = () => {
           <InformationAboutProject
             projectTitle={"Project Name"}
             projectDescription={
-              "What was your role, your deliverables, if the project was personal, freelancing."
+              "What was your role, your deliverables, if the project was personal, freelancing. What was your role, your deliverables, if the project was personal, freelancing"
             }
             flexDirection={"row-reverse"}
             primaryButton={{link:"#", label:"View Project"}}
@@ -35,7 +35,7 @@ export const Projects = () => {
           <InformationAboutProject
               projectTitle={"Project Name"}
               projectDescription={
-                  "What was your role, your deliverables, if the project was personal, freelancing."
+                  "What was your role, your deliverables, if the project was personal, freelancing. What was your role, your deliverables, if the project was personal, freelancing"
               }
               primaryButton={{link:"#", label:"View Project"}}
               secondaryButton={{link:"#",label:"View Demo"}}

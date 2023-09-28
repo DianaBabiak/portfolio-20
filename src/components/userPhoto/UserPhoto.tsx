@@ -1,6 +1,7 @@
 import mainBackground from "../../assets/images/webstorm.svg";
 import mainPhoto from "../../assets/images/girl.webp";
 import styled from "styled-components";
+import {Theme} from "../../styles/Theme.ts";
 
 export const UserPhoto = () => {
   return (
@@ -14,23 +15,36 @@ export const UserPhoto = () => {
 
 
 const StyledBackgroundUserPhoto = styled.img`
-  width: 720px;
-  height: 629px;
+  width: 803px;
+  height: 698px;
   object-fit: cover;
   position: absolute;
   top: 0;
-  right: 0;
-  z-index: 1;
+  right:0;
+  z-index: -1;
+
+  @media ${Theme.media.tablet}{
+display: none;
+
+    
+  }
 `;
 
 const StyledUserPhoto = styled.img`
   object-fit: cover;
-  width: 530px;
-  height: 690px;
+  width: 606px;
+  height: 819px;
   position: absolute;
-  top: -60px;
-  right: -37px;
+  top: -115px;
+  right: 0;
   z-index: 2;
-  border-radius: 0 0 60% 45%/0 0 54% 73%;
+  border-radius: 0 0 47% 53%/0 0 49% 94%;
+
+  @media ${Theme.media.tablet}{
+    display: none;
+
+
+
+  }
  
 `;
