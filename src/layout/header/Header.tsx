@@ -1,29 +1,34 @@
-import styled from "styled-components";
-import {Logo} from "../../components/logo/Logo.tsx";
-import {Menu} from "./menu/Menu.tsx";
-import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
-import {CONSTANT} from "../../constant/constant.ts";
-import {StyledContainer} from "../../components/styledContainer/StyledContainer.ts";
-import {MobileMenu} from "./mobileMenu/MobileMenu.tsx";
+import {Logo} from "./logo/Logo.tsx";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
+import {FlexWrapper} from "../../components/FlexWrapper.ts";
+import {GeneralContainer} from "../../components/GeneralContainer.ts";
+import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
+import {DesktopUserPhoto} from "../userPhoto/desktopUserPhoto/DesktopUserPhoto.tsx";
+import {S} from "./Header_Styles.ts";
+import {useEffect, useState} from "react";
+import {menuItems} from "../../constant/data.ts";
 
 export const Header = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 768;
 
+    useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
     return (
-        <StyledHeader>
-            <StyledContainer>
+        <S.Header>
+            <GeneralContainer>
                 <FlexWrapper justify="space-between" align="center">
                     <Logo/>
-                    <Menu menuItems={CONSTANT.menuItems}/>
-                    <MobileMenu menuItems={CONSTANT.menuItems}/>
+                    {width < breakpoint ? <MobileMenu menuItems={menuItems}/>
+                                        : <DesktopMenu menuItems={menuItems}/>}
                 </FlexWrapper>
-            </StyledContainer>
-        </StyledHeader>
+            </GeneralContainer>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-  margin-bottom: 55px;
-  position: relative;
-  z-index: 9999;
-`;
+
 

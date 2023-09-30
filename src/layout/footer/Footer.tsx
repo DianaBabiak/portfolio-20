@@ -1,43 +1,27 @@
-import styled from "styled-components";
-import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
-import {Icon} from "../../components/icon/Icon.tsx";
-import {Theme} from "../../styles/Theme.ts";
-import {StyledContainer} from "../../components/styledContainer/StyledContainer.ts";
-import {MessengersLinkList, SocialLinkList} from "../../components/messengersLinkList/MessengersLinkList.tsx";
-import {CONSTANT} from "../../constant/constant.ts";
+import {FlexWrapper} from "../../components/FlexWrapper.ts";
+import {GeneralContainer} from "../../components/GeneralContainer.ts";
+import {MessengersLinkList} from "../../components/messengersLinkList/MessengersLinkList.tsx";
+import {S} from "./Footer_Styles.ts";
+import {contactMessengers} from "../../constant/data.ts";
 
 
 export const Footer = () => {
 
     return (
-        <StyledFooter>
-            <StyledContainer>
+        <S.Footer>
+            <GeneralContainer>
                 <FlexWrapper
                     direction={"column"}
                     justify={"center"}
                     align={"center"}
                     padding={"0 0 150px 0"}
                 >
-                    <MessengersLinkList contactMessengers={CONSTANT.contactMessengers}/>
-                    <StyledText>Dziana Babiak 2023</StyledText>
+                    <MessengersLinkList contactMessengers={contactMessengers}/>
+                    <S.SmallText>Dziana Babiak 2023</S.SmallText>
                 </FlexWrapper>
-            </StyledContainer>
-        </StyledFooter>
+            </GeneralContainer>
+        </S.Footer>
     );
 };
 
-const StyledFooter = styled.footer`
-  background-image: url("../../../src/assets/images/footer.webp");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  
-  
-`;
-
-const StyledText = styled.small`
-  color: ${Theme.colors.secondaryText};
-  font-size: 16px;
-`;
 
