@@ -1,8 +1,15 @@
 import styled, {css} from "styled-components";
 import {Theme} from "../../styles/Theme.ts";
-import {ButtonLinkPropsType} from "./ButtonLink.tsx";
 
-const ButtonLink = styled.a`
+
+
+interface ButtonLinkPropsType {
+    type: "primary" | "outline";
+    size: "medium" | "large"
+}
+
+
+const ButtonLink = styled.a <ButtonLinkPropsType>`
   background-color: ${Theme.colors.accent};
   height: 43px;
   display: inline-block;
@@ -41,7 +48,6 @@ const ButtonLink = styled.a`
             border-radius: 8px;
             width: 115px;
             font-size: 18px;
-
           `}
 
   ${(props) =>

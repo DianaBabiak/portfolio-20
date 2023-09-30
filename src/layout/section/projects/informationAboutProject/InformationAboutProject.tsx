@@ -1,6 +1,5 @@
 import {ButtonLink} from "../../../../components/buttonLink/ButtonLink.tsx";
 import {FlexWrapper} from "../../../../components/FlexWrapper.ts";
-import {Theme} from "../../../../styles/Theme.ts";
 import {S} from "./InformationAboutProject_Styles.ts";
 
 interface InformationAboutProjectPropsType {
@@ -38,7 +37,6 @@ export const InformationAboutProject = ({
             <FlexWrapper
                 direction={"column"}
                 padding={"0 45px"}
-                background={Theme.colors.secondaryBg}
                 justify={"center"}
                 adaptiveAlign={'center'}
                 width={'50%'}

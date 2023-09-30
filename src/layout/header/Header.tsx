@@ -3,7 +3,6 @@ import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 import {FlexWrapper} from "../../components/FlexWrapper.ts";
 import {GeneralContainer} from "../../components/GeneralContainer.ts";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
-import {DesktopUserPhoto} from "../userPhoto/desktopUserPhoto/DesktopUserPhoto.tsx";
 import {S} from "./Header_Styles.ts";
 import {useEffect, useState} from "react";
 import {menuItems} from "../../constant/data.ts";

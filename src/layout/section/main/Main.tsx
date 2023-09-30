@@ -1,7 +1,6 @@
 import {ButtonLink} from "../../../components/buttonLink/ButtonLink.tsx";
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {GeneralContainer} from "../../../components/GeneralContainer.ts";
-import {MobileUserPhoto} from "../../userPhoto/mobileUserPhoto/MobileUserPhoto.tsx";
 import {SectionWrapper} from "../sectionWrapper/SectionWrapper.ts";
 import {S} from "./Main_Styles.ts";
 

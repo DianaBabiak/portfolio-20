@@ -1,11 +1,9 @@
-import styled from "styled-components";
 import {SectionTitle} from "../sectionTitle/SectionTitle.tsx";
 import {Button} from "../../../components/Button.ts";
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {ContactField} from "./contactField/ContactField.tsx";
 import {GeneralContainer} from "../../../components/GeneralContainer.ts";
 import {SectionWrapper} from "../sectionWrapper/SectionWrapper.ts";
-import {Theme} from "../../../styles/Theme.ts";
 import {S} from "./Contacts_Styles.ts";
 
 export const Contacts = () => {
