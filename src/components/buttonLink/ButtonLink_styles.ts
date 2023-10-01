@@ -13,18 +13,20 @@ const ButtonLink = styled.a <ButtonLinkPropsType>`
   background-color: ${Theme.colors.accent};
   height: 43px;
   display: inline-block;
-  padding: 8px 24px;
+  padding: 7px 23px;
   font-family: ${Theme.fontFamily.tertiaryFontFamily};
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
   line-height: 150%;
   color: ${Theme.colors.primaryText};
+  border: 1px solid ${Theme.colors.accent}
+  transition: ${Theme.animation.transition};
 
   ${(props) =>
           props.type === "primary" &&
           css<ButtonLinkPropsType>`
-            border: none;
+           
 
             &:hover {
               border: 1px solid ${Theme.colors.primaryBorder};

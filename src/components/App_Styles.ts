@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Theme} from "../styles/Theme.ts";
 
 
  const AppContainer=styled.div `
@@ -8,8 +9,12 @@ import styled from "styled-components";
 
 const PositionContainer = styled.div`
 max-width: 1230px;
-  margin: 0 auto;
   position: relative;
+  margin: 0 auto 120px;
+  
+  @media ${Theme.media.tablet}{
+    margin: 0 auto;
+  }
 
 `
 

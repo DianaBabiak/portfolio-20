@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {Theme} from "../../../styles/Theme.ts";
+import {Link} from "react-scroll";
 
 const DesktopMenu = styled.nav`
 
@@ -8,22 +9,32 @@ const DesktopMenu = styled.nav`
     gap: 30px;
     padding: 0 20px 0 0;
   }
-
-  li {
-
+  li{
     &:hover {
-      transform: scale(1.2);;
+      transform: scale(1.2);
+      
     }
   }
-`;
 
-const MenuLink = styled.a`
+  `
+
+const MenuLink = styled(Link)`
   color: ${Theme.colors.primaryText};
   font-family: ${Theme.fontFamily.quaternaryFontFamily};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
+  transition: ${Theme.animation.transition};
+
+  &:hover, &.active {
+    color:${Theme.colors.secondaryText} ;
+    cursor: pointer;
+  }
+  
+  @media ${Theme.media.tablet}{
+    font-size: 28px;
+  }
 
 `
 
@@ -100,35 +111,43 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   top: 0;
   bottom: 0;
   z-index: 99999;
-  display: none;
   background-color: ${Theme.colors.accent};
+  opacity: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-100%);
+  transition: ${Theme.animation.mobileMenuTransition};
 
-
-  ${(props: MobileMenuPopupProps) => props.isOpen && css`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-  `}
+  
   ul {
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 10px;
+    transition: ${Theme.animation.mobileMenuTransition};
 
 
   }
 
   li {
-    
+
     &:hover {
       transform: scale(1.2);;
     }
 
   }
+  
+  ${(props: MobileMenuPopupProps) => props.isOpen && css`
+    transform: translateY(0);
+    
+    & ul{
+      gap:50px;
+    }
 
+  `}
 `;
 
 

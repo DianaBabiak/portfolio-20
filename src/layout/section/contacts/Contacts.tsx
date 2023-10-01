@@ -5,10 +5,11 @@ import {ContactField} from "./contactField/ContactField.tsx";
 import {GeneralContainer} from "../../../components/GeneralContainer.ts";
 import {SectionWrapper} from "../sectionWrapper/SectionWrapper.ts";
 import {S} from "./Contacts_Styles.ts";
+import {ProjectsAnchors} from "../../../constant/constant.ts";
 
 export const Contacts = () => {
     return (
-        <SectionWrapper>
+        <SectionWrapper id={ProjectsAnchors.Contacts}>
             <GeneralContainer>
                 <FlexWrapper direction={"column"} align={"center"} justify={'center'} width={'100%'}>
                     <SectionTitle title={"Contact me"}/>

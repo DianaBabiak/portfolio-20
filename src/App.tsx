@@ -8,10 +8,12 @@ import {Footer} from "./layout/footer/Footer.tsx";
 import {DesktopUserPhoto} from "./layout/userPhoto/desktopUserPhoto/DesktopUserPhoto.tsx";
 import {MobileUserPhoto} from "./layout/userPhoto/mobileUserPhoto/MobileUserPhoto.tsx";
 import {S} from "./components/App_Styles.ts";
+import {Particle} from "./components/particle/Particle.tsx";
 
 function App() {
     return (
-            <S.AppContainer>
+            <S.AppContainer >
+                <Particle/>
                 <S.PositionContainer>
                     <Header/>
                     <DesktopUserPhoto/>

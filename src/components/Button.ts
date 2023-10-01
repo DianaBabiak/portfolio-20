@@ -14,9 +14,9 @@ export const Button = styled.button`
   line-height: 150%;
   color: ${Theme.colors.primaryText};
   cursor: pointer;
+  transition: ${Theme.animation.transition};
 
   &:hover{
     border: 1px solid ${Theme.colors.primaryBorder};
-    padding: 7px 23px;
   }
 `;

@@ -5,7 +5,7 @@ import {GeneralContainer} from "../../components/GeneralContainer.ts";
 import {MobileMenu} from "./headerMenu/mobileMenu/MobileMenu.tsx";
 import {S} from "./Header_Styles.ts";
 import {useEffect, useState} from "react";
-import {menuItems} from "../../constant/data.ts";
+import {MENU_ITEMS} from "../../constant/constant.ts";
 
 export const Header = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -16,13 +16,14 @@ export const Header = () => {
         window.addEventListener("resize", handleWindowResize);
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
+
     return (
         <S.Header>
             <GeneralContainer>
                 <FlexWrapper justify="space-between" align="center">
                     <Logo/>
-                    {width < breakpoint ? <MobileMenu menuItems={menuItems}/>
-                                        : <DesktopMenu menuItems={menuItems}/>}
+                    {width < breakpoint ? <MobileMenu menuItems={MENU_ITEMS}/>
+                                        : <DesktopMenu menuItems={MENU_ITEMS}/>}
                 </FlexWrapper>
             </GeneralContainer>
         </S.Header>

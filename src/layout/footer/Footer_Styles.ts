@@ -14,6 +14,11 @@ const Footer = styled.footer`
 const SmallText = styled.small`
   color: ${Theme.colors.secondaryText};
   font-size: 16px;
+  padding: 30px 0;
+  
+  @media ${Theme.media.tablet}{
+    padding: 30px 0;
+  }
 `;
 
 

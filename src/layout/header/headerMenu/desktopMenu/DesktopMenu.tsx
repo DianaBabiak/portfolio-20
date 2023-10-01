@@ -1,4 +1,5 @@
 import {S} from "../HeaderMenu_Styles.ts"
+import {HeaderMenu} from "../HeaderMenu.tsx";
 
 interface MenuPropsType {
   menuItems: {
@@ -11,15 +12,7 @@ interface MenuPropsType {
 export const DesktopMenu = ({ menuItems }: MenuPropsType) => {
   return (
     <S.DesktopMenu>
-      <ul>
-        {menuItems.map((item) => {
-          return (
-            <li key={item.name}>
-              <S.MenuLink href={item.url ?? ''}>{item.name}</S.MenuLink>
-            </li>
-          );
-        })}
-      </ul>
+      <HeaderMenu/>
     </S.DesktopMenu>
   );
 };

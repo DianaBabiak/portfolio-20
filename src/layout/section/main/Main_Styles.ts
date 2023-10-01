@@ -22,6 +22,10 @@ const MainTitle = styled.h1`
   align-self: stretch;
   margin-bottom: 5px;
 
+  p {
+    display: none;
+  }
+
   @media screen and (min-width: 769px) and (max-width: 821px) {
     color: ${Theme.colors.secondaryText};
 
@@ -31,7 +35,7 @@ const MainTitle = styled.h1`
     text-align: center;
 
   }
-  
+
 `;
 
 const Title = styled.span`

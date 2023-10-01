@@ -6,7 +6,7 @@ const MobileUserPhoto = styled.img`
   width: 100%;
   height: 546px;
   display: none;
-  margin-bottom: 10px;
+  margin: 60px 0 10px;
   
   @media ${Theme.media.tablet}{
     display: block;

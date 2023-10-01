@@ -2,14 +2,22 @@ import imageProjectOne from "../assets/images/project1.webp";
 import imageProjectTwo from "../assets/images/project2.webp";
 import imageProjectThree from "../assets/images/project3.webp";
 
+export enum ProjectsAnchors {
+    Home='home',
+    Skills = 'skills',
+    Projects = 'projects',
+    Contacts = 'contacts'
+}
 
-export const menuItems = [{name: "About", url: "#"},
-    {name: "Skills", url: "#"},
-    {name: "Projects", url: "#"},
-    {name: "Contacts", url: "#"}];
+
+export const MENU_ITEMS = [{name: "Home", url: ProjectsAnchors.Home},
+    {name: "Skills", url: ProjectsAnchors.Skills},
+    {name: "Projects", url: ProjectsAnchors.Projects},
+    {name: "Contacts", url: ProjectsAnchors.Contacts}
+];
 
 
-export const skillsIcon = [
+export const SKILLS_ICON = [
     {iconId: "js"},
     {iconId: "css"},
     {iconId: "html"},
@@ -24,7 +32,7 @@ export const skillsIcon = [
     {iconId: "sass"}];
 
 
-export const projectInformation = [
+export const PROJECT_INFORMATION = [
     {
     projectTitle: "Project Name",
     projectDescription: "What was your role, your deliverables, if the project was personal, freelancing. What was your role, your deliverables, if the project was personal, freelancing.",
@@ -55,7 +63,7 @@ export const projectInformation = [
 ];
 
 
-export const contactMessengers = [
+export const CONTACT_MESSENGERS = [
     {iconId: "email", height: "32", width: "42", viewBox: "0 0 42 32", url: "#"},
     {iconId: "linkedin", height: "38", width: "38", viewBox: "0 0 38 38", url: "#"},
     {iconId: "instagram", height: "38", width: "38", viewBox: "0 0 38 38", url: "#"}]

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {Theme} from "../../styles/Theme.ts";
 
 const SocialLinkList = styled.ul`
   display: flex;
@@ -13,6 +14,7 @@ const SocialItem = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: ${Theme.animation.transition};
 
   &:hover {
     transform: scale(1.2);;

@@ -4,17 +4,17 @@ import {SectionTitle} from "../sectionTitle/SectionTitle.tsx";
 import {GeneralContainer} from "../../../components/GeneralContainer.ts";
 import {SectionWrapper} from "../sectionWrapper/SectionWrapper.ts";
 import {S} from "./Skills_Styles.ts";
-import {skillsIcon} from "../../../constant/data.ts";
+import {ProjectsAnchors, SKILLS_ICON} from "../../../constant/constant.ts";
 
 export const Skills = () => {
     return (
-        <SectionWrapper>
+        <SectionWrapper id={ProjectsAnchors.Skills}>
             <GeneralContainer>
                 <FlexWrapper direction={"column"} align={"center"}>
                     <SectionTitle title={"Skills"}/>
                     <S.WrapperIcon>
 
-                        {skillsIcon.map((item)=>{
+                        {SKILLS_ICON.map((item)=>{
                             return  <Icon iconId={item.iconId} key={item.iconId}/>
                         })}
 

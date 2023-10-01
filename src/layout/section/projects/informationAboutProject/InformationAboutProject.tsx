@@ -56,7 +56,6 @@ export const InformationAboutProject = ({
                     )}
                 </FlexWrapper>
             </FlexWrapper>
-
             <S.ProjectImg
                 borderradius={image.borderRadius}
                 src={image.link}

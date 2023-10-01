@@ -3,6 +3,8 @@ import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {GeneralContainer} from "../../../components/GeneralContainer.ts";
 import {SectionWrapper} from "../sectionWrapper/SectionWrapper.ts";
 import {S} from "./Main_Styles.ts";
+import Typewriter from 'typewriter-effect';
+import {ProjectsAnchors} from "../../../constant/constant.ts";
 
 export const Main = () => {
     return (
@@ -10,7 +12,17 @@ export const Main = () => {
             <GeneralContainer>
                 <S.MainWrapper>
                     <FlexWrapper direction={"column"} adaptiveAlign={'center'}>
-                        <S.MainTitle>Software Developer</S.MainTitle>
+                        <S.MainTitle>
+                            <p>Software Developer</p>
+                            <Typewriter
+                                options={{
+                                    strings: ['Software Developer'],
+                                    autoStart: true,
+                                    loop: true,
+                                    delay: 150
+                                }}
+                            />
+                        </S.MainTitle>
                         <S.Title>Hello, my name is Dziana Babiak </S.Title>
                         <S.DescriptionTitle>
                             Short text with details about you, what you do or your professional career. You can add more
