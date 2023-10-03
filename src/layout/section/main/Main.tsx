@@ -4,7 +4,6 @@ import { GeneralContainer } from "../../../components/GeneralContainer.ts";
 import { SectionWrapper } from "../sectionWrapper/SectionWrapper.ts";
 import { S } from "./Main_Styles.ts";
 import Typewriter from "typewriter-effect";
-import {ProjectsAnchors} from "../../../constant/constant.ts";
 
 export const Main = () => {
   return (

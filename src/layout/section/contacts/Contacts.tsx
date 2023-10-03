@@ -10,7 +10,7 @@ import emailjs from "@emailjs/browser";
 import { ElementRef, useRef } from "react";
 
 export const Contacts = () => {
-  const form = useRef<ElementRef<"form"> | null>();
+  const form = useRef<ElementRef<"form"> | null>(null);
 
   const sendEmail = (e: any) => {
     e.preventDefault();

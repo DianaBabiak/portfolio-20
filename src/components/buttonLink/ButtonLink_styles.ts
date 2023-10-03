@@ -19,6 +19,7 @@ const ButtonLink = styled.a<ButtonLinkPropsType>`
   color: ${Theme.colors.primaryText};
   border: 1px solid ${Theme.colors.accent}
   transition: ${Theme.animation.transition};
+  white-space: nowrap;
 
   ${(props) =>
     props.type === "primary" &&
