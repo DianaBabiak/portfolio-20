@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../../../styles/Theme.ts";
+import { Theme } from "../../../styles/Theme.ts";
 
 const WrapperIcon = styled.div`
   width: 100%;
@@ -10,19 +10,17 @@ const WrapperIcon = styled.div`
   gap: 74px 0;
   justify-content: space-between;
   align-content: space-between;
-  
-  
-  @media ${Theme.media.tablet}{
+
+  @media ${Theme.media.tablet} {
     grid-template-columns: repeat(4, auto);
   }
 
-  @media ${Theme.media.mobile}{
+  @media ${Theme.media.mobile} {
     grid-template-columns: repeat(2, auto);
     justify-content: space-around;
   }
-
-`
+`;
 
 export const S = {
-    WrapperIcon
-}
+  WrapperIcon,
+};

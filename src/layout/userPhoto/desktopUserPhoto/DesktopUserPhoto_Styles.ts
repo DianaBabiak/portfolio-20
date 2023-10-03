@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import {Theme} from "../../../styles/Theme.ts";
-
+import { Theme } from "../../../styles/Theme.ts";
 
 const UserPhotoWrapper = styled.div`
   position: absolute;
   top: 0;
-  right:0;
+  right: 0;
   z-index: -1;
-
-`
+`;
 
 const BackgroundUserPhoto = styled.img`
   width: 660px;
@@ -16,12 +14,10 @@ const BackgroundUserPhoto = styled.img`
   object-fit: cover;
   position: relative;
   top: 0;
-  left:0;
+  left: 0;
 
-  @media ${Theme.media.tablet}{
-display: none;
-
-    
+  @media ${Theme.media.tablet} {
+    display: none;
   }
 `;
 
@@ -34,15 +30,13 @@ const UserPhoto = styled.img`
   right: 0;
   border-radius: 0 0 45% 54%/0 0 69% 99%;
 
-  @media ${Theme.media.tablet}{
+  @media ${Theme.media.tablet} {
     display: none;
-    
   }
-  `
+`;
 
 export const S = {
-    BackgroundUserPhoto,
-    UserPhoto,
-    UserPhotoWrapper
-
-}
+  BackgroundUserPhoto,
+  UserPhoto,
+  UserPhotoWrapper,
+};

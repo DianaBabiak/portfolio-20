@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Theme} from "../../../styles/Theme.ts";
+import { Theme } from "../../../styles/Theme.ts";
 
 const Form = styled.form`
   display: flex;
@@ -13,7 +13,7 @@ const Form = styled.form`
   @media ${Theme.media.mobile} {
     margin-top: 30px;
   }
-`
+`;
 const Label = styled.label`
   font-size: 16px;
   font-style: normal;
@@ -22,7 +22,6 @@ const Label = styled.label`
 `;
 
 export const S = {
-    Form,
-    Label
-
-}
+  Form,
+  Label,
+};

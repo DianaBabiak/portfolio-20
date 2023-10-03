@@ -1,22 +1,19 @@
-import styled, {css} from "styled-components";
-import {Theme} from "../../../styles/Theme.ts";
-import {Link} from "react-scroll";
+import styled, { css } from "styled-components";
+import { Theme } from "../../../styles/Theme.ts";
+import { Link } from "react-scroll";
 
 const DesktopMenu = styled.nav`
-
   ul {
     display: flex;
     gap: 30px;
     padding: 0 20px 0 0;
   }
-  li{
+  li {
     &:hover {
       transform: scale(1.2);
-      
     }
   }
-
-  `
+`;
 
 const MenuLink = styled(Link)`
   color: ${Theme.colors.primaryText};
@@ -27,20 +24,18 @@ const MenuLink = styled(Link)`
   line-height: 28px;
   transition: ${Theme.animation.transition};
 
-  &:hover, &.active {
-    color:${Theme.colors.secondaryText} ;
+  &:hover,
+  &.active {
+    color: ${Theme.colors.secondaryText};
     cursor: pointer;
   }
-  
-  @media ${Theme.media.tablet}{
+
+  @media ${Theme.media.tablet} {
     font-size: 28px;
   }
-
-`
-
-const MobileMenu = styled.nav`
-    
 `;
+
+const MobileMenu = styled.nav``;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
   position: absolute;
@@ -59,24 +54,26 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     left: 48px;
     bottom: 15px;
 
-    ${props => props.isOpen && css`
-      background-color: rgba(255, 255, 255, 0);
-
-    `}
+    ${(props) =>
+      props.isOpen &&
+      css`
+        background-color: rgba(255, 255, 255, 0);
+      `}
     &::before {
       content: "";
       display: block;
       width: 36px;
       height: 2px;
-      background-color: ${Theme.colors.accent};;
+      background-color: ${Theme.colors.accent};
       position: absolute;
       transform: translateY(-10px);
 
-      ${props => props.isOpen && css`
-        transform: rotate(-45deg) translateY(0);
-        background-color: ${Theme.colors.secondaryBg};
-        
-      `}
+      ${(props) =>
+        props.isOpen &&
+        css`
+          transform: rotate(-45deg) translateY(0);
+          background-color: ${Theme.colors.secondaryBg};
+        `}
     }
 
     &::after {
@@ -84,24 +81,23 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       display: block;
       width: 24px;
       height: 2px;
-      background-color: ${Theme.colors.accent};;
+      background-color: ${Theme.colors.accent};
       position: absolute;
       transform: translateY(10px);
 
-      ${props => props.isOpen && css`
-        transform: rotate(45deg) translateY(0);
-        width: 36px;
-        background-color: ${Theme.colors.secondaryBg};
-        
-      `}
+      ${(props) =>
+        props.isOpen &&
+        css`
+          transform: rotate(45deg) translateY(0);
+          width: 36px;
+          background-color: ${Theme.colors.secondaryBg};
+        `}
     }
   }
-
-
 `;
 
 interface MobileMenuPopupProps {
-    isOpen: boolean
+  isOpen: boolean;
 }
 
 const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
@@ -119,43 +115,36 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   transform: translateY(-100%);
   transition: ${Theme.animation.mobileMenuTransition};
 
-  
   ul {
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10px;
     transition: ${Theme.animation.mobileMenuTransition};
-
-
   }
 
   li {
-
     &:hover {
-      transform: scale(1.2);;
+      transform: scale(1.2);
     }
-
   }
-  
-  ${(props: MobileMenuPopupProps) => props.isOpen && css`
-    transform: translateY(0);
-    
-    & ul{
-      gap:50px;
-    }
 
-  `}
+  ${(props: MobileMenuPopupProps) =>
+    props.isOpen &&
+    css`
+      transform: translateY(0);
+
+      & ul {
+        gap: 50px;
+      }
+    `}
 `;
 
-
-
 export const S = {
-    DesktopMenu,
-    MenuLink,
-    MobileMenu,
-    BurgerButton,
-    MobileMenuPopup
-}
+  DesktopMenu,
+  MenuLink,
+  MobileMenu,
+  BurgerButton,
+  MobileMenuPopup,
+};

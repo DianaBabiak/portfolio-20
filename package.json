@@ -14,6 +14,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@types/react-scroll": "^1.8.8",
     "@types/styled-components": "^5.1.27",
     "babel-plugin-styled-components": "^2.1.4",

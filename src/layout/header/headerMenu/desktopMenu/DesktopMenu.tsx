@@ -1,19 +1,10 @@
-import {S} from "../HeaderMenu_Styles.ts"
-import {HeaderMenu} from "../HeaderMenu.tsx";
+import { S } from "../HeaderMenu_Styles.ts";
+import { HeaderMenu } from "../HeaderMenu.tsx";
 
-interface MenuPropsType {
-  menuItems: {
-      name: string,
-      url?: string
-  }[];
-
-}
-
-export const DesktopMenu = ({ menuItems }: MenuPropsType) => {
+export const DesktopMenu = () => {
   return (
     <S.DesktopMenu>
-      <HeaderMenu/>
+      <HeaderMenu />
     </S.DesktopMenu>
   );
 };
-

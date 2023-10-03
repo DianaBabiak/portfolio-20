@@ -1,9 +1,9 @@
-import {S} from "./SectionTitle_Styles.ts";
+import { S } from "./SectionTitle_Styles.ts";
 
 interface SectionTitlePropsType {
-    title: string;
+  title: string;
 }
 
-export const SectionTitle = ({title}: SectionTitlePropsType) => {
-    return <S.SectionTitle>{title}</S.SectionTitle>;
+export const SectionTitle = ({ title }: SectionTitlePropsType) => {
+  return <S.SectionTitle>{title}</S.SectionTitle>;
 };

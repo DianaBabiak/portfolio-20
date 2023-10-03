@@ -1,17 +1,21 @@
-import {S} from "./Input_Styles.ts";
+import { S } from "./Input_Styles.ts";
 
-interface InputPropsType{
-    type: 'email' | 'textarea' | 'text';
-    id:string
+interface InputPropsType {
+  type: "email" | "textarea" | "text";
+  id: string;
+  name: string;
 }
 
-export const Input =({type, id}:InputPropsType)=>{
-    if (type==='textarea'){
-      return(
-          <S.TextareaField as="textarea" id={id} ></S.TextareaField>
-      )
-    } return (
-        <S.Field type={type} id={id}></S.Field>
-    )
-}
-
+export const Input = ({ type, id, name }: InputPropsType) => {
+  if (type === "textarea") {
+    return (
+      <S.TextareaField
+        required
+        as="textarea"
+        id={id}
+        name={name}
+      ></S.TextareaField>
+    );
+  }
+  return <S.Field required type={type} id={id} name={name}></S.Field>;
+};

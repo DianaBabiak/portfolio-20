@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import {Theme} from "../../../styles/Theme.ts";
-import {font} from "../../../styles/common.ts";
+import { Theme } from "../../../styles/Theme.ts";
+import { font } from "../../../styles/common.ts";
 
 const SectionTitle = styled.h2`
   position: relative;
 
   ${font({
     family: Theme.fontFamily.secondaryFontFamily,
-    lineHeight: '150%',
-    fontMin:35,
-    fontMax: 48
+    lineHeight: "150%",
+    fontMin: 35,
+    fontMax: 48,
   })}
 
   &::before {
@@ -25,7 +25,6 @@ const SectionTitle = styled.h2`
   }
 `;
 
-
 export const S = {
-    SectionTitle
-}
+  SectionTitle,
+};

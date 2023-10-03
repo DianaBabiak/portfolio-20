@@ -32,7 +32,6 @@ font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif;
 
-
 wrapperIcon - далить из файла App.css и вообще удалить этот файл
 .app - удалить из index.css и сделать как компоненту
 arrayTitleMenu - вынести в константы

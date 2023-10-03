@@ -7,7 +7,7 @@ import react from "@vitejs/plugin-react";
 // })
 
 export default defineConfig({
-  base: 'https://DianaBabiak.github.io/portfolio-20',
+  base: "https://DianaBabiak.github.io/portfolio-20",
   plugins: [
     react({
       babel: {

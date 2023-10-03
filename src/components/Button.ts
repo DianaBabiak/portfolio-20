@@ -9,14 +9,14 @@ export const Button = styled.button`
   text-decoration: none;
   border: none;
   border-radius: 8px;
-  font-family:  ${Theme.fontFamily.tertiaryFontFamily};
+  font-family: ${Theme.fontFamily.tertiaryFontFamily};
   font-size: 18px;
   line-height: 150%;
   color: ${Theme.colors.primaryText};
   cursor: pointer;
   transition: ${Theme.animation.transition};
 
-  &:hover{
+  &:hover {
     border: 1px solid ${Theme.colors.primaryBorder};
   }
 `;

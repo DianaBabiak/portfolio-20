@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import {Theme} from "../../../../styles/Theme.ts";
-import {font} from "../../../../styles/common.ts";
+import { Theme } from "../../../../styles/Theme.ts";
+import { font } from "../../../../styles/common.ts";
 
 interface WrapperPropsType {
-    direction: string | undefined;
+  direction: string | undefined;
 }
 
 const ProjectWrapper = styled.div<WrapperPropsType>`
@@ -19,7 +19,6 @@ const ProjectWrapper = styled.div<WrapperPropsType>`
     justify-content: center;
     margin: 50px 0 0;
     gap: 24px;
-
   }
 `;
 
@@ -27,21 +26,19 @@ const ProjectTitle = styled.h3`
   align-self: stretch;
   text-align: left;
 
-  @media ${Theme.media.tablet}{
+  @media ${Theme.media.tablet} {
     text-align: center;
-
   }
 
   ${font({
     family: Theme.fontFamily.secondaryFontFamily,
-    lineHeight: '150%',
-    fontMin:26,
-    fontMax: 40
+    lineHeight: "150%",
+    fontMin: 26,
+    fontMax: 40,
   })}
 `;
 
 const ProjectDescription = styled.p`
-  
   align-self: stretch;
   padding: 24px 0;
   text-align: left;
@@ -49,18 +46,17 @@ const ProjectDescription = styled.p`
 
   @media ${Theme.media.tablet} {
     text-align: justify;
-
   }
 
   ${font({
-    color:Theme.colors.secondaryText,
-    lineHeight: '150%',
+    color: Theme.colors.secondaryText,
+    lineHeight: "150%",
     weight: 400,
   })}
 `;
 
 interface ProjectImgPropsType {
-    borderradius: string | undefined;
+  borderradius: string | undefined;
 }
 
 const ProjectImg = styled.img<ProjectImgPropsType>`
@@ -68,20 +64,17 @@ const ProjectImg = styled.img<ProjectImgPropsType>`
   width: 50%;
   height: 526px;
   flex-shrink: 0;
-  border-radius: ${(props: ProjectImgPropsType) =>
-    props.borderradius ?? "0"};
+  border-radius: ${(props: ProjectImgPropsType) => props.borderradius ?? "0"};
 
   @media ${Theme.media.tablet} {
     width: 90%;
     border-radius: 0;
     padding-bottom: 30px;
-
   }
-  `
+`;
 export const S = {
-    ProjectWrapper,
-    ProjectTitle,
-    ProjectDescription,
-    ProjectImg
-
-}
+  ProjectWrapper,
+  ProjectTitle,
+  ProjectDescription,
+  ProjectImg,
+};
