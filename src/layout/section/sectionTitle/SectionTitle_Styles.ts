@@ -5,6 +5,10 @@ import { font } from "../../../styles/common.ts";
 const SectionTitle = styled.h2`
   position: relative;
 
+  @media ${Theme.media.desktop} {
+    font-size:48px ;
+  }
+
   ${font({
     family: Theme.fontFamily.secondaryFontFamily,
     lineHeight: "150%",

@@ -11,7 +11,7 @@ const PositionContainer = styled.div`
   margin: 0 auto 120px;
 
   @media ${Theme.media.tablet} {
-    margin: 0 auto;
+    margin: 0 auto 660px;
   }
 `;
 

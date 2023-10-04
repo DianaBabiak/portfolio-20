@@ -8,6 +8,9 @@ const Footer = styled.footer`
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
+  position: relative;
+  z-index: 999;
+
 `;
 
 const SmallText = styled.small`

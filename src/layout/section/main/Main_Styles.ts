@@ -3,7 +3,7 @@ import { Theme } from "../../../styles/Theme.ts";
 import { font } from "../../../styles/common.ts";
 
 const MainWrapper = styled.div`
-  max-width: 48%;
+  max-width: 42%;
 
   @media ${Theme.media.tablet} {
     max-width: 100%;
@@ -24,7 +24,7 @@ const MainTitle = styled.h1`
     display: none;
   }
 
-  @media screen and (min-width: 769px) and (max-width: 821px) {
+  @media ${Theme.media.additional}{
     color: ${Theme.colors.secondaryText};
   }
 
@@ -38,7 +38,13 @@ const Title = styled.span`
   @media ${Theme.media.tablet} {
     text-align: center;
   }
-  ${font({
+
+  @media ${Theme.media.desktop} {
+    font-size:64px ;
+  }
+
+  
+    ${font({
     family: Theme.fontFamily.tertiaryFontFamily,
     color: Theme.colors.additionalText,
     weight: 700,
@@ -57,6 +63,10 @@ const DescriptionTitle = styled.p`
   }
   @media ${Theme.media.mobile} {
     padding: 15px 0;
+  }
+
+  @media ${Theme.media.desktop} {
+    font-size:24px ;
   }
 
   ${font({

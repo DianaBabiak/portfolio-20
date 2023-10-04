@@ -1,0 +1,5 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
+
+.alice-carousel__play-btn-item, .alice-carousel__play-btn-wrapper {
+    display: none;
+}

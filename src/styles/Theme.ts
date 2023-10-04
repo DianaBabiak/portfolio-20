@@ -21,10 +21,12 @@ export const Theme = {
   media: {
     tablet: "screen and (max-width: 768px)",
     mobile: "screen and (max-width: 576px)",
+    desktop: "screen and (min-width: 1230px)",
+    additional: "screen and (min-width: 769px) and (max-width: 872px)"
   },
 
   animation: {
     transition: ".2s ease-in-out ",
-    mobileMenuTransition: " 1s ease-in-out",
+    mobileMenuTransition: " 2s ease-in-out",
   },
 };

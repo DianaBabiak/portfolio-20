@@ -7,7 +7,9 @@ export const MobileMenu = () => {
   const onBurgerButtonClick = () => {
     setIsOpen(!isOpen);
   };
-
+    const closeMenu = () => {
+        setIsOpen(false);
+    };
   return (
     <S.MobileMenu>
       <S.BurgerButton isOpen={isOpen} onClick={onBurgerButtonClick}>
@@ -19,7 +21,7 @@ export const MobileMenu = () => {
           setIsOpen(false);
         }}
       >
-        <HeaderMenu />
+        <HeaderMenu closeMenu={closeMenu} />
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );

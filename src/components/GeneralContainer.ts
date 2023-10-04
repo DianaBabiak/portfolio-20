@@ -5,7 +5,6 @@ export const GeneralContainer = styled.div`
   min-height: 100%;
   margin: 0 auto;
   padding: 0 15px;
-  //position: relative;
 
   //border: 1px solid #1F9CF0;
 `;

@@ -29,6 +29,9 @@ const ProjectTitle = styled.h3`
   @media ${Theme.media.tablet} {
     text-align: center;
   }
+  @media ${Theme.media.desktop} {
+    font-size:40px ;
+  }
 
   ${font({
     family: Theme.fontFamily.secondaryFontFamily,

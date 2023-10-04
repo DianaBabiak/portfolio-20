@@ -3,6 +3,8 @@ import { Theme } from "../../../styles/Theme.ts";
 
 export const SectionWrapper = styled.section`
   margin-bottom: 74px;
+  position: relative;
+  z-index: 999;
 
   @media ${Theme.media.tablet} {
     margin-bottom: 50px;
