@@ -31,7 +31,8 @@ const MenuLink = styled(Link)`
   }
 
   @media ${Theme.media.tablet} {
-    font-size: 28px;
+    font-size: 40px;
+    font-weight: 1000;
   }
 `;
 
@@ -106,7 +107,7 @@ const MobileMenuPopup = styled.div<MobileMenuPopupProps>`
   bottom: 0;
   z-index: 99999;
   background-color: ${Theme.colors.accent};
-  opacity: 90%;
+  opacity: 110%;
   display: flex;
   align-items: center;
   justify-content: center;
