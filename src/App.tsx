@@ -8,7 +8,7 @@ import { Footer } from "./layout/footer/Footer.tsx";
 import {UserPhoto} from "./layout/userPhoto/UserPhoto.tsx";
 import { S } from "./components/App_Styles.ts";
 import { Particle } from "./components/particle/Particle.tsx";
-import {Carousel} from "./components/buttonLink/slider/Slider.tsx";
+
 
 function App() {
   return (
