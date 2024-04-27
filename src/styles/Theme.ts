@@ -22,7 +22,7 @@ export const Theme = {
     tablet: "screen and (max-width: 768px)",
     mobile: "screen and (max-width: 576px)",
     desktop: "screen and (min-width: 1230px)",
-    additional: "screen and (min-width: 769px) and (max-width: 872px)"
+    additional: "screen and (min-width: 769px) and (max-width: 928px)"
   },
 
   animation: {

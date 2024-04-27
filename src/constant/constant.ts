@@ -1,4 +1,4 @@
-import imageProjectOne from "../assets/images/project1.webp";
+import imageProjectOne from "../assets/images/project1.png";
 import imageProjectTwo from "../assets/images/project2.jpg";
 import imageProjectThree from "../assets/images/project3.jpg";
 
@@ -33,11 +33,11 @@ export const SKILLS_ICON = [
 
 export const PROJECT_INFORMATION = [
   {
-    projectTitle: "Project Name",
+    projectTitle: "Crypto Wallet",
     projectDescription:
-      "What was your role, your deliverables, if the project was personal, freelancing. What was your role, your deliverables, if the project was personal, freelancing.",
-    primaryButton: { link: "#", label: "View Project" },
-    secondaryButton: { link: "#", label: "View Demo" },
+      "A cryptocurrency wallet is an application that provides comprehensive information about your cryptocurrency assets and the ability to acquire new digital currencies. With it, you can manage your finances, receive real-time market data on cryptocurrencies.",
+    primaryButton: { link: "https://github.com/DianaBabiak/react-crypto", label: "View Project" },
+    secondaryButton: { link: "https://react-crypto-green.vercel.app/", label: "View Demo" },
     image: { link: imageProjectOne, borderRadius: "0 25px 25px 0" },
     flexDirection: "row",
     id: 1,
