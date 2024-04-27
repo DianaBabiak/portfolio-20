@@ -24,11 +24,18 @@ export const Main = () => {
             </S.MainTitle>
             <S.Title>Hello, my name is Dziana Babiak </S.Title>
             <S.DescriptionTitle>
-              Short text with details about you, what you do or your
-              professional career. You can add more information on the about
-              page.
+              I am a Front-end developer. I work with technologies such as React, TypeScript, Redux (RTK), and other related libraries.
             </S.DescriptionTitle>
-            <FlexWrapper gap={"12px"}>
+            <S.DescriptionTitle>
+              I am constantly improving my skills and I want to expand them with new technologies like React Native, Next.js, GraphQL, and others.
+            </S.DescriptionTitle>
+            <S.DescriptionTitle>
+              In my free time, I enjoy solving problems on Codewars and learning about new technologies.
+            </S.DescriptionTitle>
+            <S.DescriptionTitle>
+              I am always open to new opportunities and would be happy to chat and consider your proposals.
+            </S.DescriptionTitle>
+            <FlexWrapper gap={"12px"} margin={'20px 0 0'}>
               <ButtonLink
                 label={"Projects"}
                 link={"https://github.com/DianaBabiak"}

@@ -21,7 +21,7 @@ export const MessengersLinkList = ({
         {contactMessengers.map((item) => {
           return (
             <S.SocialItem key={item.iconId}>
-              <S.IconLink href={item.url}>
+              <S.IconLink href={item.url} target="_blank">
                 <Icon
                   iconId={item.iconId}
                   height={item.height}

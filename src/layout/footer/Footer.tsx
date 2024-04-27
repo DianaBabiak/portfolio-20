@@ -15,7 +15,7 @@ export const Footer = () => {
           padding={"0 0 150px 0"}
         >
           <MessengersLinkList contactMessengers={CONTACT_MESSENGERS} />
-          <S.SmallText>Dziana Babiak 2023</S.SmallText>
+          <S.SmallText>Dziana Babiak 2024</S.SmallText>
         </FlexWrapper>
       </GeneralContainer>
     </S.Footer>

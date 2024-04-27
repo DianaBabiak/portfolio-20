@@ -18,5 +18,6 @@ export const Button = styled.button`
 
   &:hover {
     border: 1px solid ${Theme.colors.primaryBorder};
+    padding: 7px 23px;
   }
 `;

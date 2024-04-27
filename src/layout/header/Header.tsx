@@ -16,7 +16,7 @@ export const Header = () => {
   const windowRef = useRef(window);
 
   const handleScroll = () => {
-    if (windowRef.current.scrollY > 150) {
+    if (windowRef.current.scrollY > 50) {
       setScrollBackground(Theme.colors.accent);
     } else {
       setScrollBackground('transparent');

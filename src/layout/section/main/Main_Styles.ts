@@ -3,7 +3,7 @@ import { Theme } from "../../../styles/Theme.ts";
 import { font } from "../../../styles/common.ts";
 
 const MainWrapper = styled.div`
-  max-width: 42%;
+  max-width: 40%;
 
   @media ${Theme.media.tablet} {
     max-width: 100%;
@@ -55,18 +55,20 @@ const Title = styled.span`
 `;
 
 const DescriptionTitle = styled.p`
-  padding: 32px 0;
+  padding: 3px 0;
+  text-indent: 10px;
+  text-align: justify;
 
   @media ${Theme.media.tablet} {
     text-align: justify;
-    padding: 26px 0;
+    padding: 5px 0;
   }
   @media ${Theme.media.mobile} {
-    padding: 15px 0;
+    padding: 5px 0;
   }
 
   @media ${Theme.media.desktop} {
-    font-size:24px ;
+    font-size:20px ;
   }
 
   ${font({

@@ -26,6 +26,7 @@ const ButtonLink = styled.a<ButtonLinkPropsType>`
     css<ButtonLinkPropsType>`
       &:hover {
         border: 1px solid ${Theme.colors.primaryBorder};
+        padding: 6px 22px;
       }
     `}
 
