@@ -1,6 +1,7 @@
 import imageProjectOne from "../assets/images/project1.png";
 import imageProjectTwo from "../assets/images/project2.jpg";
 import imageProjectThree from "../assets/images/project3.jpg";
+import imageProjectFour from "../assets/images/project4.jpeg";
 
 export enum ProjectsAnchors {
   Home = "home",
@@ -61,6 +62,16 @@ export const PROJECT_INFORMATION = [
     image: { link: imageProjectThree, borderRadius: "0 25px 25px 0" },
     flexDirection: "row",
     id: 3,
+  },
+  {
+    projectTitle: "Check Flow",
+    projectDescription:
+        "The project provides a user-friendly interface for creating, editing, deleting and displaying tasks and to-do lists.",
+    primaryButton: { link: "https://github.com/DianaBabiak/todolist", label: "View Project" },
+    secondaryButton: { link: "https://todolist-wine-mu.vercel.app", label: "View Demo" },
+    image: { link: imageProjectFour, borderRadius: "25px 0 0 25px" },
+    flexDirection: "row-reverse",
+    id: 1,
   },
 ];
 

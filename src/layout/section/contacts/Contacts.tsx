@@ -17,10 +17,10 @@ export const Contacts = () => {
 
     emailjs
       .sendForm(
-        "service_tx0vwzw",
+        "service_k6w2do8",
         "template_edig7wj",
         form.current ?? "",
-        "6Vb-6zq8NphCJFjhx",
+        "yFAb1LU31hcDbgyn2",
       )
       .then((result) => {
         console.log(result.text);
