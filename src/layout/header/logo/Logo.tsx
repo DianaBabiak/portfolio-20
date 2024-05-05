@@ -14,9 +14,9 @@ export const Logo = () => {
       <a onClick={scroll.scrollToTop}>
         <Icon
           iconId={"logo"}
-          height={"50px"}
-          width={"50px"}
-          viewBox={"0 0 50 50"}
+          height={"42px"}
+          width={"42px"}
+          viewBox={"0 0 42 42"}
         />
       </a>
       <S.LogoTitle>Dziana Babiak</S.LogoTitle>

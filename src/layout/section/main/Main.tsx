@@ -4,10 +4,11 @@ import { GeneralContainer } from "../../../components/GeneralContainer.ts";
 import { SectionWrapper } from "../sectionWrapper/SectionWrapper.ts";
 import { S } from "./Main_Styles.ts";
 import Typewriter from "typewriter-effect";
+import {ProjectsAnchors} from "../../../constant/constant.ts";
 
 export const Main = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper id={ProjectsAnchors.Home}>
       <GeneralContainer>
         <S.MainWrapper>
           <FlexWrapper direction={"column"} adaptiveAlign={"center"}>
@@ -22,20 +23,20 @@ export const Main = () => {
                 }}
               />
             </S.MainTitle>
-            <S.Title>Hello, my name is Dziana Babiak </S.Title>
+            <S.Title>Hi, I am Dziana </S.Title>
             <S.DescriptionTitle>
-              I am a Front-end developer. I work with technologies such as React, TypeScript, Redux (RTK), and other related libraries.
+              I am a frontend developer inspired by the world
+              of technology and committed to constant
+              growth. My interests lie in React, TypeScript,
+              and Redux (RTK), and I strive to explore new
+              opportunities such as React Native, Next.js, and
+              GraphQL . In my spare time, I enjoy tackling
+              challenging problems on Codewars and delving
+              into cutting-edge technologies. I am open to
+              new challenges and eager to discuss exciting
+              prospects.
             </S.DescriptionTitle>
-            <S.DescriptionTitle>
-              I am constantly improving my skills and I want to expand them with new technologies like React Native, Next.js, GraphQL, and others.
-            </S.DescriptionTitle>
-            <S.DescriptionTitle>
-              In my free time, I enjoy solving problems on Codewars and learning about new technologies.
-            </S.DescriptionTitle>
-            <S.DescriptionTitle>
-              I am always open to new opportunities and would be happy to chat and consider your proposals.
-            </S.DescriptionTitle>
-            <FlexWrapper gap={"12px"} margin={'20px 0 0'}>
+            <FlexWrapper gap={"12px"} margin={'20px 0 0'} justify={'center'}>
               <ButtonLink
                 label={"Projects"}
                 link={"https://github.com/DianaBabiak"}

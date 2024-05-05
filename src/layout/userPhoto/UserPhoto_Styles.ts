@@ -2,10 +2,6 @@ import styled from "styled-components";
 import { Theme } from "../../styles/Theme.ts";
 
 const UserPhotoWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 9;
   overflow: hidden;
   
 `;
@@ -23,12 +19,11 @@ const BackgroundUserPhoto = styled.img`
 
 const UserPhoto = styled.img`
   object-fit: cover;
-  width: 500px;
-  height: 683px;
-  position: absolute;
-  top: -54px;
-  right: 36px;
-  border-radius: 0 0 45% 54%/0 0 25% 99%;
+  width: 250px;
+  height: 250px;
+ 
+  
+  border-radius: 50%;
 
   @media ${Theme.media.tablet} {
     width: 564px;

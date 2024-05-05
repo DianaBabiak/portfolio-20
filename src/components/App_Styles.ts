@@ -6,12 +6,12 @@ const AppContainer = styled.div`
 `;
 
 const PositionContainer = styled.div`
-  max-width: 1230px;
-  position: relative;
-  margin: 0 auto 120px;
-
+   max-width: 1230px;
+   position: relative;
+   margin: 0 auto;
+  
   @media ${Theme.media.tablet} {
-    margin: 0 auto 660px;
+    margin: 0 auto 55px;
   }
 `;
 

@@ -3,7 +3,7 @@ import { Theme } from "../../../styles/Theme.ts";
 import { font } from "../../../styles/common.ts";
 
 const MainWrapper = styled.div`
-  max-width: 40%;
+  display: flex;
 
   @media ${Theme.media.tablet} {
     max-width: 100%;

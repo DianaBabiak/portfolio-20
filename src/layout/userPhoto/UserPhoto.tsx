@@ -1,5 +1,5 @@
 import mainBackground from "../../assets/images/yellow-bg.svg";
-import mainPhoto from "../../assets/images/girl.webp";
+import mainPhoto from "../../assets/images/IMG_20240429_164934.jpg";
 import { S } from "./UserPhoto_Styles.ts";
 import { ProjectsAnchors } from "../../constant/constant.ts";
 
