@@ -10,6 +10,7 @@ const Footer = styled.footer`
   width: 100%;
   position: relative;
   z-index: 999;
+  margin-top: 74px;
 
 `;
 
