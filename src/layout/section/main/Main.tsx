@@ -25,16 +25,7 @@ export const Main = () => {
             </S.MainTitle>
             <S.Title>Hi, I am Dziana </S.Title>
             <S.DescriptionTitle>
-              I am a frontend developer inspired by the world
-              of technology and committed to constant
-              growth. My interests lie in React, TypeScript,
-              and Redux (RTK), and I strive to explore new
-              opportunities such as React Native, Next.js, and
-              GraphQL . In my spare time, I enjoy tackling
-              challenging problems on Codewars and delving
-              into cutting-edge technologies. I am open to
-              new challenges and eager to discuss exciting
-              prospects.
+              I am a frontend developer with skills in solving tasks of varying complexity. My approach to development is not only focused on achieving results on time but also based on the principles of SOLID, DRY, KISS. In the past, I successfully managed a department where I organized effective team collaboration to achieve common goals. I am ready to become an integral part of your team and contribute to the success of your projects.
             </S.DescriptionTitle>
             <FlexWrapper gap={"12px"} margin={'20px 0 0'} justify={'center'}>
               <ButtonLink
