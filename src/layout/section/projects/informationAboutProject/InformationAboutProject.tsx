@@ -5,6 +5,7 @@ import { S } from "./InformationAboutProject_Styles.ts";
 interface InformationAboutProjectPropsType {
   projectTitle: string;
   projectDescription: string;
+  projectStack:string;
   flexDirection?: string;
 
   primaryButton: {
@@ -26,7 +27,7 @@ interface InformationAboutProjectPropsType {
 
 export const InformationAboutProject = ({
   projectTitle,
-  projectDescription,
+  projectDescription,projectStack,
   flexDirection,
   primaryButton,
   secondaryButton,
@@ -44,6 +45,8 @@ export const InformationAboutProject = ({
       >
         <S.ProjectTitle>{projectTitle}</S.ProjectTitle>
         <S.ProjectDescription>{projectDescription}</S.ProjectDescription>
+        <S.Title>Technology Stack:</S.Title>
+        <S.ProjectDescription>{projectStack}</S.ProjectDescription>
         <FlexWrapper gap={"10px"} wrap={"wrap"} adaptiveJustify={"center"}>
           <ButtonLink
             link={primaryButton.link}

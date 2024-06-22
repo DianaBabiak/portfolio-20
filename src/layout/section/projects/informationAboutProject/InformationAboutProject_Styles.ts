@@ -25,6 +25,7 @@ const ProjectWrapper = styled.div<WrapperPropsType>`
 const ProjectTitle = styled.h3`
   align-self: stretch;
   text-align: left;
+  margin-bottom: 24px;
 
   @media ${Theme.media.tablet} {
     text-align: center;
@@ -43,7 +44,7 @@ const ProjectTitle = styled.h3`
 
 const ProjectDescription = styled.p`
   align-self: stretch;
-  padding: 24px 0;
+  padding: 0 0 24px;
   text-align: left;
   font-size: 18px;
 
@@ -58,6 +59,20 @@ const ProjectDescription = styled.p`
   })}
 `;
 
+const Title = styled.p`
+  align-self: stretch;
+  text-align: left;
+  font-size: 22px;
+
+  @media ${Theme.media.tablet} {
+    text-align: justify;
+  }
+
+  ${font({
+  lineHeight: "150%",
+  weight: 600,
+})}
+`;
 interface ProjectImgPropsType {
   borderradius: string | undefined;
 }
@@ -80,4 +95,5 @@ export const S = {
   ProjectTitle,
   ProjectDescription,
   ProjectImg,
+  Title
 };
