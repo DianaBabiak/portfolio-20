@@ -26,6 +26,7 @@ export const Projects = () => {
                 key={item.id}
                 projectTitle={item.projectTitle}
                 projectDescription={item.projectDescription}
+                projectStack={item.projectStack}
                 primaryButton={item.primaryButton}
                 secondaryButton={item.secondaryButton}
                 image={item.image}
